@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/main_back"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:background="#a3ff82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/enter_your_data"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="#95c7d1d1"
+            android:fontFamily="sans-serif"
+            android:hint="@string/name_hint"
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <EditText
+            android:id="@+id/weight_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#95c7d1d1"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="16dp"
+            android:gravity="center|end"
+            android:hint="@string/weight_hint"
+            android:inputType="numberSigned"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
+        <EditText
+            android:id="@+id/height_text"
+            android:layout_width="0dp"
+            android:gravity="center|end"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:background="#95c7d1d1"
+            android:fontFamily="sans-serif"
+            android:hint="@string/height_hint"
+            android:inputType="numberSigned"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weight_text" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:background="#907dfffb"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/height_text">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:text="زن"
+                android:id="@+id/female"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_height="wrap_content" />
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:text="مرد"
+                android:id="@+id/male"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calculate_bmi_button"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/main_button"
+            android:fontFamily="sans-serif"
+            android:text="محاصبه ی bmi"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/result_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/result_container"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="100dp"
+            android:layout_marginBottom="64dp"
+            android:background="#907dfffb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:text="شما اضافه وزن دارید!" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

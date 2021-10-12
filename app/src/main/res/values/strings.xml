@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">محاصبه ی BMI</string>
+    <string name="about_us">درباره ی ما</string>
+    <string name="calc_bmi_button">محاصبه ی BMI</string>
+    <string name="name_hint">نام خود را وارد کنید!</string>
+    <string name="enter_your_data">اطلاعات خود را وارد کنید!</string>
+    <string name="weight_hint" >وزن خود را وارد کنید!</string>
+    <string name="height_hint" >قد خود را وارد کنید!</string>
+    <string name="please_enter_height" >لطفا قد خود را وارد کنید!</string>
+    <string name="please_enter_name" >لطفا نام خود را وارد کنید!</string>
+    <string name="please_enter_weight" >لطفا وزن خود را وارد کنید!</string>
+    <string name="please_select_gender" >لطفا جنسیت خود را وارد کنید!</string>
+    <string name="result_template">%n جان، عدد bmi شما %r میباشد، شما دارای %s هستید.</string>
+</resources>
